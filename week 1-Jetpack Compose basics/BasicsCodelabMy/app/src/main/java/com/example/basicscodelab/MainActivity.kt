@@ -59,6 +59,7 @@ private fun Greetings(names: List<String> = List(1000) { "This $it" } ) {
     }
 }
 
+//test
 @Composable
 private fun Greeting2(name: String) {
     Card(
