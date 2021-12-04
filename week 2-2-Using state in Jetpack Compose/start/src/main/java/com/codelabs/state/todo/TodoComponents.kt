@@ -213,7 +213,7 @@ fun TodoInputText(
     TextField(
         value = text,
         onValueChange = onTextChange,
-        colors = TextFieldDefaults.textFieldColors(backgroundColor = Color.Transparent),
+        colors = TextFieldDefaults.textFieldColors(backgroundColor = Color.Transparent, focusedIndicatorColor = Color.Magenta, unfocusedIndicatorColor = Color.Blue),
         maxLines = 1,
         keyboardOptions = KeyboardOptions.Default.copy(imeAction = ImeAction.Done),
         keyboardActions = KeyboardActions(onDone = {
