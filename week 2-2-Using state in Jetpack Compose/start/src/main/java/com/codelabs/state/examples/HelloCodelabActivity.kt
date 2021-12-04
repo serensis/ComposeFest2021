@@ -28,6 +28,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.widget.doAfterTextChanged
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -113,6 +114,7 @@ class HelloActivityCompose : AppCompatActivity() {
     }
 }
 
+@Preview
 @Composable
 private fun HelloScreen(helloViewModel: HelloViewModel = viewModel()) {
     // helloViewModel follows the Lifecycle as the the Activity or Fragment that calls this

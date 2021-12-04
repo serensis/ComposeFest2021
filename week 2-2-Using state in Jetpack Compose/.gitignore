@@ -1,0 +1,5 @@
+/build
+.gradle
+.idea
+CONTRIBUTING.md
+local.properties
