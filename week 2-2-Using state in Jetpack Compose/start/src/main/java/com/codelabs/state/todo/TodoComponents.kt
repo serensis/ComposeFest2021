@@ -27,15 +27,7 @@ import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.RowScope
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.defaultMinSize
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -59,6 +51,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.codelabs.state.ui.purple500
 
 /**
  * Draws a row of [TodoIcon] with visibility changes animated.
@@ -213,7 +206,7 @@ fun TodoInputText(
     TextField(
         value = text,
         onValueChange = onTextChange,
-        colors = TextFieldDefaults.textFieldColors(backgroundColor = Color.Transparent, focusedIndicatorColor = Color.Magenta, unfocusedIndicatorColor = Color.Blue),
+        colors = TextFieldDefaults.textFieldColors(backgroundColor = Color.Transparent),
         maxLines = 1,
         keyboardOptions = KeyboardOptions.Default.copy(imeAction = ImeAction.Done),
         keyboardActions = KeyboardActions(onDone = {
@@ -245,10 +238,16 @@ fun TodoEditButton(
         enabled = enabled,
         modifier = modifier
     ) {
-        Text(text)
+        Text(text = text)
     }
 }
 
 @Preview
 @Composable
 fun PreviewIconRow() = IconRow(icon = TodoIcon.Square, onIconChange = {})
+
+@Preview
+@Composable
+fun PreviewElements() {
+    TodoEditButton(onClick = { /*TODO*/ }, text = "ADD")
+}
